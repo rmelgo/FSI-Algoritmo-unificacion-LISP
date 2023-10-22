@@ -1,0 +1,19 @@
+(load "unificacion.lsp")
+(load "atomo.lsp")
+(load "comprobaciones.lsp")
+(load "aplicar.lsp")
+(load "componer.lsp")
+(unificar 'f 'f)
+(unificar 'A 'B)
+(unificar 'A '(? x))
+(unificar '(? x) 'A)
+(unificar '(? x) '(g (? x)))
+(unificar '(f (? X)) '(f A))
+(unificar '(f (? X) (? Y)) '(f A B))
+(unificar '(f (? X) (g (? X))) '(f A (g A)))
+(unificar '(f (? Y) A) '(f (? X) (? X)))
+
+
+
+
+
